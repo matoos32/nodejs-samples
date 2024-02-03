@@ -1,2 +1,3 @@
 # nodejs-samples
-Snippets and sample code developed while learning aspects of NodeJS programming.
+
+Experimental snippets of code developed while learning aspects of NodeJS programming.

@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-samples",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "Experimental snippets of code developed while learning aspects of NodeJS programming.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT"
+}
