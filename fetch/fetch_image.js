@@ -58,7 +58,7 @@ if (!(resp && resp.ok)) {
 
     const imgFilename = "fetched.jpg";
 
-    console.log(`Got bytes. Saving ${imgFilename} ...`);
+    console.log("Got the bytes. Saving them to file ...");
 
     await writeBytes("./" + imgFilename, uint8ArrayView);
 
