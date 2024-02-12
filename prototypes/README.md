@@ -20,6 +20,8 @@ This app exercises multiple aspects of Node/JavaScript:
   the populated object instances to make them an immutable record.
 - Using [try/catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
   to test modifying the immutable record and expecting an exception.
+- Using [spread syntax](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax)
+  to assign values of enumerable properties.
 
 The app defines a hard-coded JSON string representing some weather data records. It parses the string
 into a consummable object with nested array test data.
@@ -33,8 +35,10 @@ accomplish this. As a last step, `Object.freeze()` is used to make the new insta
 
 The app logs the new instances with default values and the same instances after assigning and freezing.
 
-As a final step, the app demonstrates the immutability by testing if it can assign a value to a property.
+The app then demonstrates the immutability by testing if it can assign a value to a property.
 This operation fails as expected in a try/catch block.
+
+The app then repeats assignment operations by using spread syntax to copy enumerable properties.
 
 ## See Also
 
@@ -99,4 +103,37 @@ Listing all records:
 
 Attempting to modify a frozen record. We expect an exception ...
 Exception while setting temperature value: TypeError: Cannot assign to read only property 'temperature' of object '[object Object]'
+
+Repeating with spread operator ...
+
+Populated record toString():    [object Object]
+Populated record:
+{
+  recorded_at: '2024-02-12T00:27:38.495Z',
+  latitude: 44.75,
+  longitude: -34.0023,
+  temperature: 31.78,
+  humidity: 56.1,
+  uv: 6
+}
+Populated record toString():    [object Object]
+Populated record:
+{
+  recorded_at: '2024-02-12T00:31:12.106Z',
+  latitude: 44.72,
+  longitude: -34.47,
+  temperature: 32.4,
+  humidity: 60.3,
+  uv: 5.34
+}
+Populated record toString():    [object Object]
+Populated record:
+{
+  recorded_at: '2024-02-12T00:35:53.708Z',
+  latitude: 44.73,
+  longitude: -34.95,
+  temperature: 32.29,
+  humidity: 59.79,
+  uv: 6.1
+}
 ```

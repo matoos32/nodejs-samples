@@ -86,7 +86,7 @@ if (weatherRecords.length > 0) {
   console.log("\nListing all records:\n");
 
   for (let i = 0; i < weatherRecords.length; i++) {
-    console.log(`${i+1}. ${weatherRecords[i]}`);
+    console.log(`${i+1}. ${weatherRecords[i].toString()}`);
   }
 
   console.log("\nAttempting to modify a frozen record. We expect an exception ...");
@@ -99,6 +99,22 @@ if (weatherRecords.length > 0) {
 
 } else {
   // Oh oh
-  console.log("No records processed :(");
+  console.log("\nNo records processed :(");
 }
+
+console.log("\nRepeating with spread operator ...");
+
+const weatherRecords2 = data.records.map(record => {
+
+  // Assign enumerable properties (shallow-copy only as references to nested objects should be copied)
+  const weatherRecord = {...record};
+
+  Object.freeze(weatherRecord);
+
+  console.log(`\nPopulated record toString():    ${weatherRecord.toString()}`);
+  console.log(`Populated record:`);
+  console.log(weatherRecord);
+
+  return weatherRecord;
+});
 
