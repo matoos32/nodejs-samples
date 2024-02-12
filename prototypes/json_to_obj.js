@@ -52,6 +52,9 @@ const weatherRecordPrototype = {
   // toString: function () { return `[ts:${this.recorded_at}, location:(${this.latitude},${this.longitude}), t:${this.temperature}, h:${this.humidity}, uv:${this.uv}]` }
 }
 
+// Adding toString will override the default Object.prototype.toString()
+// See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/toString
+
 Object.defineProperty(weatherRecordPrototype, 'toString', {
   value: function () { return `[ts:${this.recorded_at}, location:(${this.latitude},${this.longitude}), t:${this.temperature}, h:${this.humidity}, uv:${this.uv}]` },
   writeable: false,
