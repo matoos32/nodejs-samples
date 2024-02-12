@@ -36,6 +36,10 @@ The app logs the new instances with default values and the same instances after 
 As a final step, the app demonstrates the immutability by testing if it can assign a value to a property.
 This operation fails as expected in a try/catch block.
 
+## See Also
+
+[Inheritance and the prototype chain](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Inheritance_and_the_prototype_chain).
+
 ## Sample Usage and Output
 
 `$ node prototypes/json_to_obj.js`
